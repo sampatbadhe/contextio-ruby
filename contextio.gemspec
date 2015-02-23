@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.summary       = 'Provides interface to Context.IO'
   gem.description   = 'Provides Ruby interface to Context.IO'
   gem.license       = 'MIT'
-  gem.authors       = ['Ben Hamill']
-  gem.email         = %w(ben@benhamill.com)
+  gem.authors       = ['Michael Bernstein', 'Eric Pinzur']
+  gem.email         = %w(michael.bernstein@returnpath.com, eric.pinzur@returnpath.com)
   gem.homepage      = 'https://github.com/contextio/contextio-ruby#readme'
 
   gem.files         = `git ls-files`.split($/)
