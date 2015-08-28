@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.summary       = 'Provides interface to Context.IO'
   gem.description   = 'Provides Ruby interface to Context.IO'
   gem.license       = 'MIT'
-  gem.authors       = ['Ben Hamill']
-  gem.email         = %w(ben@benhamill.com)
+  gem.authors       = ['Michael Bernstein', 'Eric Pinzur']
+  gem.email         = %w(michael.bernstein@returnpath.com, eric.pinzur@returnpath.com)
   gem.homepage      = 'https://github.com/contextio/contextio-ruby#readme'
 
   gem.files         = `git ls-files`.split($/)
@@ -18,6 +18,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ['lib']
 
   gem.add_dependency 'faraday', '~> 0.9.1'
+
   gem.add_dependency 'faraday_middleware', '~> 0.9.0'
   gem.add_dependency 'simple_oauth', '~> 0.2.0'
 

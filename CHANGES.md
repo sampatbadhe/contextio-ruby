@@ -1,5 +1,12 @@
 # Changes
 
+## 1.8.0
+
+* loosened faraday dependency - Michael Bernstein
+* Moved `ContextIO::Message#thread` from private to public, and also changed the
+  method to return json data instead of creating a `ContextIO::Thread` object. - Eric Pinzur
+* Add 'references' to lazy_attributes in message.rb - Dylan Stamat
+
 ## 1.7.2
 
 * Improve error handling for better trouble shooting. - Ben Hamill

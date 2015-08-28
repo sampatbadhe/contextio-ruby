@@ -15,7 +15,8 @@ class ContextIO
     lazy_attributes :date, :folders, :addresses, :subject, :list_help,
                     :list_unsubscribe, :message_id, :email_message_id,
                     :gmail_message_id, :gmail_thread_id, :person_info,
-                    :date_received, :date_indexed, :in_reply_to
+                    :date_received, :date_indexed, :in_reply_to, :references
+
     private :date_received, :date_indexed
 
     def received_at
@@ -91,13 +92,10 @@ class ContextIO
       api.request(:delete, resource_url)['success']
     end
 
-    private
-
-    # The API doesn't return enough information to build a resource_url for this
-    # resource, or the resource_url its self, making this problematic. Marking
-    # this private until something is sorted on that front.
+    # Returns a list of all messages and a list of all email_message_ids in the same thread as this message.
+    # Note that it does not create a Thread object or a MessageCollection object in its current state.
     def thread
-      ContextIO::Thread.new(api, api.request(:get, "#{resource_url}/thread").merge(account: account))
+      api.request(:get, "#{resource_url}/thread")
     end
   end
 end
