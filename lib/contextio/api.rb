@@ -170,6 +170,7 @@ class ContextIO
 
         faraday.request :oauth, consumer_key: key, consumer_secret: secret
         faraday.request :url_encoded
+        faraday.request :retry, max: 0
 
         faraday.adapter Faraday.default_adapter
       end
