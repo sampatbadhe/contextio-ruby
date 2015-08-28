@@ -1,5 +1,8 @@
 # Changes
 
+##2.0.o
+*Limit Faraday to no retries on requests, update version of faraday -Bonnie Mattson
+
 ## 1.8.0
 
 * loosened faraday dependency - Michael Bernstein
