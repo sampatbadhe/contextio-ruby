@@ -5,6 +5,7 @@ class ContextIO
   # inspect or delete the provider. Most of the attributes are lazily loaded,
   # meaning that the API won't get hit until you ask for an attribute the object
   # doesn't already have (presumably from a previous API call).
+
   class OAuthProvider
     include API::Resource
 
@@ -17,7 +18,8 @@ class ContextIO
     # @!attribute [r] type
     #   @return [String] The consumer key associated with this provider. Will
     #     fetch from the API if necessary.
-    lazy_attributes :provider_consumer_key, :provider_consumer_secret, :type
+    lazy_attributes :provider_consumer_key, :provider_consumer_secret, :type,
+      :consumer_secret, :token_secret, :signature
 
     self.primary_key = :provider_consumer_key
     self.association_name = :oauth_provider
