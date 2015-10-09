@@ -18,8 +18,7 @@ class ContextIO
     # @!attribute [r] type
     #   @return [String] The consumer key associated with this provider. Will
     #     fetch from the API if necessary.
-    lazy_attributes :provider_consumer_key, :provider_consumer_secret, :type,
-      :consumer_secret, :token_secret, :signature
+    lazy_attributes :provider_consumer_key, :provider_consumer_secret, :type
 
     self.primary_key = :provider_consumer_key
     self.association_name = :oauth_provider

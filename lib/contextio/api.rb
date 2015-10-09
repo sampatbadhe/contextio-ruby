@@ -168,7 +168,7 @@ class ContextIO
       @connection ||= Faraday::Connection.new(base_url) do |faraday|
         faraday.headers['User-Agent'] = user_agent_string
 
-        faraday.request :oauth, consumer_key: key, consumer_secret: secret
+        faraday.request :oauth, consumer_key: key#, consumer_secret: secret
         faraday.request :url_encoded
         faraday.request :retry, max: 0
 
